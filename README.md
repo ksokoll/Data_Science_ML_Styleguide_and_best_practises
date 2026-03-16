@@ -8,7 +8,7 @@ An opinionated, practical guide for writing Data Science code in Python, focusin
 
 Not a checklist for code review but a reference for understanding why certain patterns exist and what goes wrong when you ignore them.
 
-## 2. Software Engineering at Google — ML/AI Insights
+## 2. Software Engineering at Google: ML/AI Insights
 
 A chapter-by-chapter extraction of the most relevant ideas from *Software Engineering at Google* (Winters, Manshreck, Wright, 2020), filtered for E2E AI/ML engineering: Data Engineering, Data Science, ML Engineering, Solution Architecture, CI/CD, Serving, and Dependency Management.
 

@@ -1,12 +1,15 @@
-# About This Guide
-This guide collects opinionated, practical rules for writing Data Science code in Python. It derives of years of practise and falling into pitfalls, creating unreadable, unperformant and complex code where simpler techniques would be more appropriate. It focuses specifically on Pandas, NumPy, and Scikit-learn and the patterns, pitfalls, and conventions that general-purpose style guides do not address.
+# Data Science / ML Style guides and best practises
 
-## What it covers: 
+This repository contains reference guides for writing production-grade Data Science and ML code in Python.
 
-vectorization, DataFrame safety, sorting, hyperparameter management, reproducibility, data leakage prevention, null value handling, and model evaluation.
+## 1. Data Science Style Guide
 
-## What it does not cover: 
+An opinionated, practical guide for writing Data Science code in Python, focusing specifically on Pandas, NumPy, and Scikit-learn. It derives from years of practice and the pitfalls that general-purpose style guides do not address: vectorization, DataFrame safety, sorting, hyperparameter management, reproducibility, data leakage prevention, null value handling, and model evaluation.
 
-general Python style (see PEP8), code structure and documentation conventions (see the Google Python Style Guide), or framework-specific deep learning patterns (PyTorch, TensorFlow, etc.).
-This guide is not a checklist to enforce in code review. It is a reference and a set of defaults that reflect current best practices and the reasoning behind them. Every rule can be broken when the situation calls for it. Understanding why a rule exists is more valuable than following it blindly.
+Not a checklist for code review but a reference for understanding why certain patterns exist and what goes wrong when you ignore them.
 
+## 2. Software Engineering at Google — ML/AI Insights
+
+A chapter-by-chapter extraction of the most relevant ideas from *Software Engineering at Google* (Winters, Manshreck, Wright, 2020), filtered for E2E AI/ML engineering: Data Engineering, Data Science, ML Engineering, Solution Architecture, CI/CD, Serving, and Dependency Management.
+
+Where the style guide focuses on how to write individual pieces of ML code correctly, this guide focuses on how to maintain, test, and operate ML systems over time and at scale like Hyrum's Law applied to feature pipelines, the test pyramid applied to training infrastructure, trunk-based development applied to model releases.

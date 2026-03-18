@@ -225,11 +225,11 @@ Social graph connections transfer well across products. Interest-based personali
 
 *Chapter-by-chapter extraction from: Software Engineering at Google (Winters, Manshreck, Wright, 2020)*
 
-Relevance: ★★★★★ = very high, ★★★★☆ = high, ★★★☆☆ = medium, ★★☆☆☆ = low
+Relevance:  = very high,  = high,  = medium,  = low
 
 ---
 
-## Chapter 1 — What Is Software Engineering? ★★★★★
+## Chapter 1 — What Is Software Engineering? 
 
 **Tags:** Architecture, ML Engineering, Data Engineering
 
@@ -251,7 +251,7 @@ Finding problems earlier is cheaper. Applied to ML: validate data schemas at ing
 
 ---
 
-## Chapter 2 — How to Work Well on Teams ★★☆☆☆
+## Chapter 2 — How to Work Well on Teams 
 
 **Tags:** Architecture
 
@@ -265,7 +265,7 @@ When a model degrades in production: structured post-mortem with timeline, root 
 
 ---
 
-## Chapter 3 — Knowledge Sharing ★★★☆☆
+## Chapter 3 — Knowledge Sharing 
 
 **Tags:** Architecture, ML Engineering
 
@@ -283,7 +283,7 @@ If only one person knows why a feature was engineered a particular way, that's a
 
 ---
 
-## Chapter 4 — Engineering for Equity ★★★★☆
+## Chapter 4 — Engineering for Equity 
 
 **Tags:** Data Science, ML Engineering
 
@@ -301,7 +301,7 @@ Google Photos classifying Black people as gorillas is a direct ML example. Train
 
 ---
 
-## Chapter 7 — Measuring Engineering Productivity ★★★★★
+## Chapter 7 — Measuring Engineering Productivity 
 
 **Tags:** Data Science, ML Engineering, Architecture
 
@@ -325,7 +325,7 @@ Only measure what you will actually use as a basis for decisions. If a metric wo
 
 ---
 
-## Chapter 8 — Style Guides and Rules ★★★★☆
+## Chapter 8 — Style Guides and Rules 
 
 **Tags:** ML Engineering, Data Engineering
 
@@ -343,7 +343,7 @@ Consistent code enables automated refactoring. If all feature transformers follo
 
 ---
 
-## Chapter 9 — Code Review ★★★★☆
+## Chapter 9 — Code Review 
 
 **Tags:** ML Engineering, Data Engineering, Architecture
 
@@ -361,7 +361,7 @@ ML PRs should be small and focused. Don't combine "new feature + refactoring + d
 
 ---
 
-## Chapter 10 — Documentation ★★★★☆
+## Chapter 10 — Documentation 
 
 **Tags:** ML Engineering, Architecture
 
@@ -382,7 +382,7 @@ Documentation in the same repo as the code. `docs/decisions/` for ADRs. `model_c
 
 ---
 
-## Chapter 11 — Testing Overview ★★★★★
+## Chapter 11 — Testing Overview 
 
 **Tags:** ML Engineering, Data Engineering, CI/CD
 
@@ -410,7 +410,7 @@ Without tests you cannot safely refactor the feature pipeline. Tests are what ma
 
 ---
 
-## Chapter 12 — Unit Testing ★★★★★
+## Chapter 12 — Unit Testing 
 
 **Tags:** ML Engineering, Data Engineering
 
@@ -432,7 +432,7 @@ In tests, some duplication is fine if it makes the test more understandable. Eve
 
 ---
 
-## Chapter 13 — Test Doubles ★★★★☆
+## Chapter 13 — Test Doubles 
 
 **Tags:** ML Engineering, Data Engineering
 
@@ -450,7 +450,7 @@ In integration tests: stub ENTSO-E API responses. Don't hit the real API in CI. 
 
 ---
 
-## Chapter 14 — Larger Testing ★★★★★
+## Chapter 14 — Larger Testing 
 
 **Tags:** ML Engineering, Data Engineering, CI/CD
 
@@ -477,7 +477,7 @@ Test that the Docker container starts cleanly with all required env vars — smo
 
 ---
 
-## Chapter 15 — Deprecation ★★★☆☆
+## Chapter 15 — Deprecation 
 
 **Tags:** Architecture, ML Engineering
 
@@ -495,7 +495,7 @@ Users will have grown dependent on deprecated behavior. Provide migration tools 
 
 ---
 
-## Chapter 16 — Version Control and Branch Management ★★★★★
+## Chapter 16 — Version Control and Branch Management 
 
 **Tags:** Data Engineering, ML Engineering, CI/CD
 
@@ -517,7 +517,7 @@ DORA research: trunk-based development is a significant positive predictor of hi
 
 ---
 
-## Chapter 18 — Build Systems and Build Philosophy ★★★★☆
+## Chapter 18 — Build Systems and Build Philosophy 
 
 **Tags:** Data Engineering, ML Engineering, CI/CD
 
@@ -547,7 +547,7 @@ Docker layer caching, pip caching in CI. Don't rebuild what hasn't changed. Espe
 
 ---
 
-## Chapter 20 — Static Analysis ★★★★☆
+## Chapter 20 — Static Analysis 
 
 **Tags:** ML Engineering, Data Engineering
 
@@ -565,7 +565,7 @@ Domain experts write their own analyzer rules. An ML engineer who finds a recurr
 
 ---
 
-## Chapter 21 — Dependency Management ★★★★☆
+## Chapter 21 — Dependency Management 
 
 **Tags:** Dependencies, Data Engineering
 
@@ -592,7 +592,7 @@ For a production ML pipeline with a 3+ year lifespan, these are critical questio
 
 ---
 
-## Chapter 22 — Large-Scale Changes ★★★☆☆
+## Chapter 22 — Large-Scale Changes 
 
 **Tags:** Architecture, ML Engineering
 
@@ -606,7 +606,7 @@ Without tests, large refactorings are too risky. Tests are what makes safe refac
 
 ---
 
-## Chapter 23 — Continuous Integration ★★★★★
+## Chapter 23 — Continuous Integration 
 
 **Tags:** CI/CD, ML Engineering, Data Engineering
 
@@ -638,7 +638,7 @@ The Docker container starts cleanly with all env vars — smoke test. Configurat
 
 ---
 
-## Chapter 24 — Continuous Delivery ★★★★★
+## Chapter 24 — Continuous Delivery 
 
 **Tags:** CI/CD, Serving, ML Engineering
 
@@ -664,7 +664,7 @@ Staging → Canary (10%) → Full Production. Automatic rollback when metrics de
 
 ---
 
-## Chapter 25 — Compute as a Service ★★★★★
+## Chapter 25 — Compute as a Service 
 
 **Tags:** Serving, Architecture, ML Engineering
 

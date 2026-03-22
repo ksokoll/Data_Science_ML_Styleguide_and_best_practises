@@ -699,20 +699,9 @@ For infrequent batch inference jobs: serverless (AWS Lambda, Cloud Functions) ca
 
 ---
 
-## Summary: Top Priorities for Your Energy Forecasting Project
+# My personal learnings:
 
-### Immediately actionable (before March 31)
+### Return Objects for Pipeline Orchestration
 
-1. **Pydantic schemas** for feature pipeline outputs (Hyrum's Law protection)
-2. **Write small tests** for domain logic — lag features, null handling, no I/O
-3. **Set up GitHub Actions CI:** `black` + `mypy` + `pytest` on every PR
-4. **Pin all dependencies** in `pyproject.toml` with exact versions
-5. **`docs/decisions/`** with ADRs for key architectural decisions
-6. **Docker smoke test:** container starts cleanly with all env vars
+Multi-step orchestrators (training, ingestion, prediction) should return structured result objects, not None. A dataclass with execution metadata (rows_written, duration_seconds, rows_dropped) gives the caller inspectable output without log parsing. This enables downstream monitoring, conditional logic in schedulers (Airflow, Step Functions), and consistent contracts at every orchestration boundary. Exceptions remain the error signal; the return object confirms success with context.
 
-### Architecture principles confirmed
-
-* **DDD layering:** Domain (pure Python) → Application (use cases) → Infrastructure (MLflow, FastAPI, DB)
-* **Trunk-based development:** short-lived branches, frequent commits to `main`
-* **Test pyramid:** 80% unit (domain), 15% integration (pipeline), 5% E2E (real data)
-* **One-Version Rule:** pin all dependencies, no floating versions

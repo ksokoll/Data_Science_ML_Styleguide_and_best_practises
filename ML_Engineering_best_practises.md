@@ -705,3 +705,10 @@ For infrequent batch inference jobs: serverless (AWS Lambda, Cloud Functions) ca
 
 Multi-step orchestrators (training, ingestion, prediction) should return structured result objects, not None. A dataclass with execution metadata (rows_written, duration_seconds, rows_dropped) gives the caller inspectable output without log parsing. This enables downstream monitoring, conditional logic in schedulers (Airflow, Step Functions), and consistent contracts at every orchestration boundary. Exceptions remain the error signal; the return object confirms success with context.
 
+### Library Specific Abbreviations
+
+Avoid using library-specific abbreviations that might seem ambiguous to readers unfamiliar with the specific library.
+Example: "self.con" with DuckDB. Better: "self.connection"
+
+Google Style Guide: "Avoid abbreviations that are ambiguous or unfamiliar to readers outside your project."
+

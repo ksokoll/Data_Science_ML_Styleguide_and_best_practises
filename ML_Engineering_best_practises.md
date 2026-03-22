@@ -712,3 +712,9 @@ Example: "self.con" with DuckDB. Better: "self.connection"
 
 Google Style Guide: "Avoid abbreviations that are ambiguous or unfamiliar to readers outside your project."
 
+### Data Type Autodetection
+
+Avoid using data type autodetection, for example "auto_detect = true" and use schemas instead. Reason: auto_detect can be non-deterministic
+and lead to data conversion or silent errors. This is OK if the data come from a controlled source like Kaggle, but since I want to learn real
+world software engineering this should be avoided.
+

@@ -708,9 +708,12 @@ Multi-step orchestrators (training, ingestion, prediction) should return structu
 ### Library Specific Abbreviations
 
 Avoid using library-specific abbreviations that might seem ambiguous to readers unfamiliar with the specific library.
-Example: "self.con" with DuckDB. Better: "self.connection"
+Example: "self.con" with DuckDB. Better: "self.connection" or "ts" for a pandas timestamp. Better: "timestamp"
 
 Google Style Guide: "Avoid abbreviations that are ambiguous or unfamiliar to readers outside your project."
+
+Rule of Thumb: The bigger the scope the variable is used, the better the self-declaration should be. Best is to avoid such
+short variable names alltogether.
 
 ### Data Type Autodetection
 

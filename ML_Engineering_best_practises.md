@@ -721,3 +721,19 @@ Avoid using data type autodetection, for example "auto_detect = true" in DuckDB 
 and lead to data conversion or silent errors. This is OK if the data come from a controlled source like Kaggle, but since I want to learn real
 world software engineering this should be avoided.
 
+### Avoid Magic Numbers
+
+I have the habit to code magic numbers in the draft phase of my software, marking for later that I transfer them into a config. Bad Idea, those
+get forgotten and might make it to production code.
+
+Example:
+
+        request = CompletionRequest(
+            system=CLASSIFICATION_PROMPT,
+            user=query,
+            temperature=settings.temperature_default,
+            response_format={"type": "json_object"},
+            max_tokens=150,
+        )
+
+The "max_tokens=150" should definately be part of a config in this context.

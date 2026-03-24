@@ -737,3 +737,19 @@ Example:
         )
 
 The "max_tokens=150" should definately be part of a config in this context.
+
+### Don't Recover What You Can Request
+
+When you need structured data from an LLM, request it directly in the
+output contract. Do not encode information into the prompt, hope the
+model preserves it in free text, and then parse it back out. That is a
+round-trip that adds fragility without adding information.
+
+The pattern to watch for: you already know the structure you want, but
+you let the model express it in an uncontrolled format, then write
+recovery code (regex, string splitting, heuristics) to reconstruct
+what you had before the call.
+
+If you find yourself writing code to extract structured data from an
+LLM response, ask: could I have gotten this as a field in a structured
+output instead? The answer is almost always yes.

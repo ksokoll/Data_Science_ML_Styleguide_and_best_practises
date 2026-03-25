@@ -753,3 +753,17 @@ what you had before the call.
 If you find yourself writing code to extract structured data from an
 LLM response, ask: could I have gotten this as a field in a structured
 output instead? The answer is almost always yes.
+
+### @staticmethod as a Signal for Pure Transformation
+
+Use `@staticmethod` when a method has no dependency on instance state.
+It signals to the reader: this is a pure transformation — same input
+always produces the same output, no side effects, no I/O.
+
+A `@staticmethod` can be called directly on the class without
+constructing an instance, which makes it trivially testable in isolation.
+
+Rule of thumb: if a method only references its own parameters and no
+`self` attributes, it is a candidate for `@staticmethod` or a
+module-level function. Prefer `@staticmethod` when the logic is
+conceptually tied to the class but does not require its state.

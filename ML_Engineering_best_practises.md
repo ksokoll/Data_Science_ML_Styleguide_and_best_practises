@@ -760,3 +760,38 @@ Rule of thumb: if a method only references its own parameters and no
 `self` attributes, it is a candidate for `@staticmethod` or a
 module-level function. Prefer `@staticmethod` when the logic is
 conceptually tied to the class but does not require its state.
+
+### Fitness Test Coverage
+
+Fitness tests tend to get a bit less attention than functionality tests, though they are even more important. It is good practise to go through your
+architecture checking these topics:
+
+- Scalability
+  
+For scalability testing, we could use load testing tools to simulate a high volume of orders. For example, suppose we get big enough that we’re the official pizza of a future SuperBowl. We want to make sure we can scale our services under certain loads. Use these tests to ensure that your system can scale and perform well.
+
+- Security
+  
+For security testing, we could have fitness tests in place to ensure the data is getting stored properly and is locked down properly.
+
+- Maintainability
+  
+For maintainability, we can have fitness tests to ensure that code metrics such as degree of coupling are set within certain tolerance levels. This can be done with something like ArchUnitNet.
+
+- Availability
+  
+For availability, we would want to analyze our system to ensure there isn’t a single point of failure that could bring down the entire syste,
+
+- Other Tests
+  
+Other tests we could do include:
+
+- Order Cancellation Test:
+
+Simulate order cancellations at different stages of the process (before payment, after payment) and verify the system handles them correctly, including updates to inventory and customer notifications.
+
+- Email Delivery Test:
+
+Set up automated tests to ensure emails (order confirmations, invoices) are delivered successfully and contain the correct information.
+
+

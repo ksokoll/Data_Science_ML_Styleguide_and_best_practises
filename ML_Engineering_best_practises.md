@@ -724,17 +724,10 @@ world software engineering this should be avoided.
 ### Avoid Magic Numbers
 
 I have the habit to code magic numbers in the draft phase of my software, marking for later that I transfer them into a config. Bad Idea, those
-get forgotten and might make it to production code.
+get forgotten and might make it to production code. Better: Add them to the config with the correct context. Same for static values like 
+file name extensions, if they are part of a contract.
 
-Example:
 
-        request = CompletionRequest(
-            system=CLASSIFICATION_PROMPT,
-            user=query,
-            temperature=settings.temperature_default,
-            response_format={"type": "json_object"},
-            max_tokens=150,
-        )
 
 The "max_tokens=150" should definately be part of a config in this context.
 
